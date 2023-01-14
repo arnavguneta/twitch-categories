@@ -1,0 +1,49 @@
+const email_content = (user, new_game) => `
+<body style="background-color:#24252A">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body {
+            margin: 0 auto;
+            height: auto;
+        }
+        
+        main {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            padding: 2em 2em;
+        }
+        
+        .container {
+            margin: 0 0;
+            padding: 0 0;
+        }
+        
+        .header ul li {
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="container">
+        <main style="color:#f9f9f9;">
+            <!-- <img style="width:200px;height:200px;margin-bottom:2em;" src="https://pngimg.com/uploads/twitch/twitch_PNG18.png" alt="twitch-logo" /> -->
+            <div class="header" style="border-bottom:#f9f9f9 1px solid;padding-bottom:.5em;width:70%;margin:auto;">
+                <ul style="margin-right:65px;">
+                    <li style="background: url(${user.thumbnail_url}) no-repeat center; background-size: 85px 85px;background-color:#0088A9;width:135px;height:135px;border-radius:75px;">
+                    </li>
+                    <li style="padding-left:1.5em;">
+                        <h1 style="margin: 0 0;">Category Change</h1>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <p style="font-size:1.5em;"><span style="text-decoration:underline">${user.display_name}</span> is now streaming <span style="text-decoration:underline">${new_game}</span></p>
+            <p style="font-size:1.5em;">The stream's title is "${user.title}"</p>
+        </main>
+    </div>
+
+</body>
+`
+module.exports = email_content
